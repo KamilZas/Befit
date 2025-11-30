@@ -13,15 +13,25 @@ public function up()
 {
     Schema::create('performed_exercises', function (Blueprint $table) {
         $table->id();
+
         $table->foreignId('user_id')->constrained()->onDelete('cascade');
-        $table->foreignId('training_session_id')->constrained()->onDelete('cascade');
-        $table->foreignId('exercise_type_id')->constrained('exercise_types')->onDelete('restrict');
-        $table->decimal('weight', 8, 2)->nullable(); // obciążenie (kg)
-        $table->unsignedSmallInteger('sets'); // liczba serii
-        $table->unsignedSmallInteger('reps'); // liczba powtórzeń w serii
+
+        $table->foreignId('training_session_id')
+            ->constrained('training_sessions')
+            ->onDelete('cascade');
+
+        $table->foreignId('exercise_type_id')
+            ->constrained('exercise_types')
+            ->onDelete('restrict');
+
+        $table->decimal('weight', 8, 2)->nullable();
+        $table->unsignedSmallInteger('sets');
+        $table->unsignedSmallInteger('reps');
         $table->text('notes')->nullable();
+
         $table->timestamps();
     });
+
 }
 
 

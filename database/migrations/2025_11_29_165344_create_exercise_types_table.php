@@ -13,10 +13,11 @@ public function up()
 {
     Schema::create('exercise_types', function (Blueprint $table) {
         $table->id();
-        $table->string('name', 100)->unique(); // nazwa ćwiczenia
+        $table->string('name');
         $table->text('description')->nullable();
         $table->timestamps();
     });
+
 }
 
     /**

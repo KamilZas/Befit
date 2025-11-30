@@ -11,15 +11,17 @@ return new class extends Migration
      */
 public function up()
 {
-    Schema::create('training_session', function (Blueprint $table) {
+    Schema::create('training_sessions', function (Blueprint $table) {
         $table->id();
         $table->foreignId('user_id')->constrained()->onDelete('cascade');
+
         $table->date('date');
         $table->time('start_time');
         $table->time('end_time')->nullable();
-        $table->text('notes')->nullable();
+
         $table->timestamps();
     });
+
 }
 
 
