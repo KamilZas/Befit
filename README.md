@@ -20,17 +20,17 @@ Widok statystyk ostatnich 4 tygodni.
 Użytkownik widzi tylko swoje sesje treningowe i ćwiczenia.
 ## Instalacja
 
-git clone https://github.com/KamilZas/Befit/
-cd projekt
-composer install
-npm install
-npm run build
-cp .env.example .env
-DB_DATABASE=befit
-DB_USERNAME=root
-DB_PASSWORD=
-php artisan key:generate
-php artisan migrate --seed
-php artisan serve
-http://127.0.0.1:8000
+git clone https://github.com/KamilZas/Befit/ <br />
+cd projekt  <br />
+composer install  <br />
+npm install  <br />
+npm run build  <br />
+cp .env.example .env  <br />
+DB_DATABASE=befit  <br />
+DB_USERNAME=root  <br />
+DB_PASSWORD=  <br />
+php artisan key:generate  <br />
+php artisan migrate --seed  <br />
+php artisan serve  <br />
+http://127.0.0.1:8000  <br />
 
