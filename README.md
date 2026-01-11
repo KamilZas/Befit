@@ -20,8 +20,12 @@ Widok statystyk ostatnich 4 tygodni.
 Użytkownik widzi tylko swoje sesje treningowe i ćwiczenia.
 ## Instalacja
 
+<<<<<<< HEAD
 git clone https://github.com/KamilZas/Befit/ <br />
 cd projekt  <br />
+=======
+git clone https://github.com/KamilZas/Befit/tree/master <br />
+>>>>>>> master
 composer install  <br />
 npm install  <br />
 npm run build  <br />
